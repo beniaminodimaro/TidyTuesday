@@ -9,4 +9,7 @@ library(readxl)
 library(here)
 
 # Loading raw dataset
-here("data", "R_code")
+data <- dir(here("week1", "data"), full.names = TRUE, pattern = "us_avg") %>%
+  read_excel()
+
+
