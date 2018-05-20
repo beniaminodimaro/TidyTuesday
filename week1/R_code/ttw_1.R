@@ -12,4 +12,8 @@ library(here)
 data <- dir(here("week1", "data"), full.names = TRUE, pattern = "us_avg") %>%
   read_excel()
 
+# tidying data
+
+tidy_data <- data %>%
+  gather(year, avg_tuition , -State)
 
